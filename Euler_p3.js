@@ -51,7 +51,7 @@ function problem3(n=13195){
         factor.push(primes[i]);
       }
   }
-  //if the number is a prime fix its factors
+  //if the number is a prime, fix its factors
   if (!(factor[0] > 1)) {factor.push(1);}
 
   var msg = "The largest prime factor of "+n + " is "+ factor[0] + " factors are: "+factor;
