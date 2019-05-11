@@ -1,6 +1,6 @@
 console.log(problem1(1000));
 
-function problem1(n1=1000){
+function problem1(n=1000){
 /*
 If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.
 The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.
@@ -20,8 +20,8 @@ Fascinating pattern of answers below
   function returns sum of the multiples
 */
 
-  //problem states below n1
-  n= n1-1;
+  //problem states < n
+  n--;
 
   //The trick to problem is to realize that (3+6+9+12+....)  = 3*(1+2+3+4+...x1)
 
