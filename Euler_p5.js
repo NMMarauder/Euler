@@ -5,7 +5,7 @@ function problem5(n=10){
 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
 What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
-I can't think of any trick that makes this easier.  Just brute force check.
+I can't think of any trick that makes this easier.  Just do a brute force check.
 
 */
 
@@ -22,7 +22,7 @@ return(x);
 }
 
 function allEvenFactors(i,n){
-  //recursive function it n is an even factor it reduces it by one and checks again.
+  //recursive function if n is an even factor it reduces it by one and checks again.
   if (i%n ==0 ){
     n--;
     if (n < 2) { return true;}

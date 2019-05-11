@@ -9,7 +9,6 @@ What is the 10 001st prime number?
 
 Solution: Use sieve of Eratosthenes to generate prime numbers up to the nth prime number.
 
-
 Use the asymptotic law of distribution of prime numbers to determine the upperLimit of our
 sieve loop.   The asymptotic law states that:
 
