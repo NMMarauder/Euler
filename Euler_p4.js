@@ -1,5 +1,5 @@
 
-console.log(problem4(3));
+console.log(problem4(6));
 
 function problem4(n=3){
 
