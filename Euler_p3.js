@@ -1,7 +1,7 @@
 console.log(problem3(600851475143));
-//console.log(problem3(6857));
+// console.log(problem3(6857));
 
-function problem3(n=13195){
+function problem3(n = 13195) {
   /*
   The prime factors of 13195 are 5, 7, 13 and 29.
   What is the largest prime factor of the number 600851475143 ?
@@ -16,44 +16,44 @@ function problem3(n=13195){
 
   */
 
-  //Initialize variables
-  var array = [];
+  // Initialize variables
+  const array = [];
   upperLimit = Math.floor(Math.sqrt(n));
-  var primes = [];
-  var factor=[];
+  const primes = [];
+  const factor = [];
 
-  //Make an array from 2 to (upperLimit)
+  // Make an array from 2 to (upperLimit)
   for (var i = 0; i <= upperLimit; i++) {
-      array.push(true);
+    array.push(true);
   }
 
-  //Remove multiples of primes starting from 2, 3, 5,...
+  // Remove multiples of primes starting from 2, 3, 5,...
   for (var i = 2; i <= upperLimit; i++) {
-      if (array[i]) {
-        for (var j = i * i; j <= upperLimit; j += i) {
-          array[j] = false;
-        }
+    if (array[i]) {
+      for (let j = i * i; j <= upperLimit; j += i) {
+        array[j] = false;
       }
+    }
   }
 
-  //All array[i] items set to true are primes
-  count=0;
+  // All array[i] items set to true are primes
+  count = 0;
   for (var i = 2; i <= upperLimit; i++) {
-      if(array[i]) {
-        primes.push(i);
-        count++;
-      }
+    if (array[i]) {
+      primes.push(i);
+      count++;
+    }
   }
 
   // Search array in reverse for prime factors of n
   for (var i = primes.length; i >= 0; i--) {
-      if( n%primes[i]==0) {
-        factor.push(primes[i]);
-      }
+    if (n % primes[i] == 0) {
+      factor.push(primes[i]);
+    }
   }
-  //if the number is a prime, fix its factors
-  if (!(factor[0] > 1)) {factor.push(1);}
+  // if the number is a prime, fix its factors
+  if (!(factor[0] > 1)) { factor.push(1); }
 
-  var msg = "The largest prime factor of "+n + " is "+ factor[0] + " factors are: "+factor;
+  const msg = `The largest prime factor of ${n} is ${factor[0]} factors are: ${factor}`;
   return msg;
 }
