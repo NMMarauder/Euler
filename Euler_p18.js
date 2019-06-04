@@ -107,7 +107,7 @@ var triangle =[[3],
     i=triangle.length -2;
   }
 
-  return triangle[0];
+  return Number(triangle[0]);
 
 
 
