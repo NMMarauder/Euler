@@ -1,6 +1,6 @@
 console.log(problem16(1000));
 
-function problem16(n=15){
+function problem16(n=15) {
 
   /*
   Problem:
